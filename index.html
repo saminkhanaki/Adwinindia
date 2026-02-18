@@ -3,19 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adwinindia.com | Business Asset Test</title>
+    <title>Adwinindia.com | Premium Business Domain</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; background-color: #f0f2f5; }
-        .bg-test {
-            width: 100%; height: 100%;
-            /* تصویر مدرن شهری و بیزنس */
-            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop'); 
-            background-size: cover;
-            background-position: center;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f0f2f5; overflow: hidden; }
+
+        /* تصویر پس‌زمینه بیزنس مدرن */
+        .bg-img {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover; background-position: center; z-index: 0;
+        }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(10, 31, 64, 0.8), rgba(25, 42, 86, 0.85));
+            z-index: 1;
+        }
+
+        .container { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; }
+
+        .card { 
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px 40px; border-radius: 12px; text-align: center;
+            max-width: 500px; width: 92%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-bottom: 5px solid #0056b3; /* خط آبی بیزنسی زیر کارت */
+        }
+
+        .brand-tag { 
+            color: #0056b3; font-weight: bold; font-size: 0.85em;
+            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: block;
+        }
+
+        h1 { font-size: 2.2em; color: #1a1a1a; margin-bottom: 15px; letter-spacing: -0.5px; }
+        .ext { color: #0056b3; }
+
+        p { color: #4b5563; margin-bottom: 30px; line-height: 1.6; font-size: 1.1em; }
+
+        .trust-line { 
+            font-size: 0.85em; color: #6b7280; margin-top: 25px; 
+            display: flex; justify-content: center; align-items: center; gap: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="bg-test"></div>
+    <div class="bg-img"></div>
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <div class="card">
+            <span class="brand-tag">Growth • Ads • Technology</span>
+            <h1>Adwinindia<span class="ext">.com</span></h1>
+            <p>The premier domain for advertising technology, digital marketing, and growth-driven platforms in the Indian market.</p>
+            
+            <div class="trust-line">
+                <span>✓ Verified Asset</span>
+                <span>•</span>
+                <span>✓ Direct Transfer</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
