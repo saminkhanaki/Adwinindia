@@ -6,8 +6,7 @@
     <title>Adwinindia.com | Premium Digital Asset</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        /* تغییر مهم: overflow-y اجازه اسکرول می‌دهد */
-        body, html { min-height: 100%; font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; overflow-x: hidden; overflow-y: auto; }
+        body, html { min-height: 100%; font-family: 'Inter', 'Segoe UI', Arial, sans-serif; background-color: #f0f2f5; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth; }
 
         .bg-img {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -17,19 +16,18 @@
 
         .overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, rgba(10, 31, 64, 0.8), rgba(25, 42, 86, 0.85));
+            background: linear-gradient(135deg, rgba(10, 31, 64, 0.85), rgba(25, 42, 86, 0.9));
             z-index: 1;
         }
 
-        /* بخش کانتینر اصلی برای کارت */
-        .hero-section { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 20px; }
+        .hero-section { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 40px 20px; }
 
         .card { 
             background: rgba(255, 255, 255, 0.98);
             padding: 50px 40px; border-radius: 16px; text-align: center;
             max-width: 500px; width: 100%;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-            border-top: 6px solid #0056b3;
+            border-top: 8px solid #0056b3;
         }
 
         .brand-tag { 
@@ -37,9 +35,9 @@
             text-transform: uppercase; letter-spacing: 3px; margin-bottom: 20px; display: block;
         }
 
-        h1 { font-size: 2.4em; color: #111827; margin-bottom: 15px; letter-spacing: -1px; }
+        h1 { font-size: 2.6em; color: #111827; margin-bottom: 15px; letter-spacing: -1px; }
         .ext { color: #0056b3; }
-        p { color: #374151; margin-bottom: 35px; line-height: 1.7; font-size: 1.15em; }
+        .hero-p { color: #374151; margin-bottom: 35px; line-height: 1.7; font-size: 1.15em; }
 
         .btn { 
             display: block; padding: 18px; margin: 12px 0; border-radius: 8px;
@@ -49,23 +47,24 @@
         }
 
         .btn-blue { background: #0056b3; color: white; border: none; }
-        .btn-blue:hover { background: #004494; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 86, 179, 0.3); }
+        .btn-blue:hover { background: #004494; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 86, 179, 0.3); }
 
         .btn-outline { background: transparent; color: #0056b3; border: 2px solid #0056b3; }
-        .btn-outline:hover { background: #f0f7ff; transform: translateY(-2px); }
+        .btn-outline:hover { background: #f0f7ff; transform: translateY(-3px); }
 
         .trust-line { font-size: 0.85em; color: #9ca3af; margin-top: 30px; display: flex; justify-content: center; gap: 15px; font-weight: 500; }
 
-        /* استایل بخش مقاله */
-        .article-section {
-            position: relative; z-index: 2;
-            background: white;
-            padding: 60px 20px;
-            margin-top: 20px;
-        }
-        .article-content { max-width: 800px; margin: 0 auto; color: #333; line-height: 1.8; }
-        .article-content h2 { color: #0056b3; margin-bottom: 20px; }
-        .technical-box { background: #f8f9fa; padding: 25px; border-radius: 12px; margin-top: 30px; border-left: 4px solid #0056b3; }
+        /* Article Section */
+        .article-section { position: relative; z-index: 2; background: white; padding: 100px 20px; border-top: 2px solid #eee; }
+        .article-content { max-width: 850px; margin: 0 auto; color: #333; line-height: 2; }
+        .article-content h2 { color: #0056b3; font-size: 2.4em; margin-bottom: 30px; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
+        .article-content p { margin-bottom: 25px; font-size: 1.15em; text-align: justify; }
+        .kw { color: #0056b3; font-weight: 700; }
+
+        .technical-box { background: #f8f9fa; padding: 35px; border-radius: 16px; margin: 40px 0; border-left: 6px solid #0056b3; }
+        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; list-style: none; margin-top: 20px; }
+        .tech-item strong { display: block; color: #111827; font-size: 1.1em; }
+        .tech-item span { color: #666; font-size: 0.95em; }
     </style>
 </head>
 <body>
@@ -76,7 +75,7 @@
         <div class="card">
             <span class="brand-tag">Strategy • Victory • Growth</span>
             <h1>Adwinindia<span class="ext">.com</span></h1>
-            <p>A premium, high-impact domain designed for visionary brands, tech ventures, and market leaders across India.</p>
+            <p class="hero-p">A premium, high-impact domain designed for visionary brands, tech ventures, and industrial leaders across India.</p>
             
             <div class="btn-container">
                 <a href="https://www.afternic.com/domain/adwinindia.com" class="btn btn-blue">PURCHASE VIA AFTERNIC</a>
@@ -91,22 +90,27 @@
         </div>
     </div>
 
-    <div class="article-section">
+    <section class="article-section">
         <div class="article-content">
             <h2>From Industrial Roots to Digital Excellence</h2>
-            <p>The story of <strong>Adwin India</strong> is one of evolution and precision. Originally established as a domain serving the <strong>industrial refrigeration and cooling sector</strong>, we have carried that same engineering mindset—durability, reliability, and efficiency—into the world of digital marketing. Just as industrial systems require perfect calibration to function, we believe that modern advertising in India demands a specialized, technical approach to reach its full potential.</p>
+            <p>The legacy of <strong>Adwinindia.com</strong> is built on a foundation of precision, reliability, and technical expertise. Originally established as a digital hub for the <strong>industrial refrigeration and cooling sector</strong>, the domain carries a historical weight that resonates with engineering excellence. In the business world, names that evoke "Winning" (Win) and "Advertising" (Ad) combined with a regional powerhouse like "India" create a formidable brand identity for any ambitious enterprise.</p>
             
-            <p>Today, Adwin India has transitioned into a premier digital growth partner, bridging the gap between heavy industry principles and cutting-edge marketing technology. By leveraging deep insights into regional consumer behavior and industrial B2B dynamics, we empower businesses to navigate the complexities of the Indian digital economy.</p>
+            <p>Today, <strong>Adwin India</strong> represents more than just its industrial origins. It has evolved into a premier digital asset for companies looking to dominate the <span class="kw">Indian Market</span>. Whether you are launching a <span class="kw">Digital Marketing Agency</span>, a B2B industrial portal, or a <span class="kw">Tech Startup</span>, this domain provides the authority needed to rank in a competitive economy. The synergy between "Ad" and "Win" suggests a result-oriented approach, making it perfect for growth-hackers and strategic consultancy firms.</p>
 
             <div class="technical-box">
-                <h3 style="margin-bottom: 15px; font-size: 1.2em;">Technical Domain Insights (Verified by Moz)</h3>
-                <ul style="list-style: none;">
-                    <li style="margin-bottom: 8px;"><strong>• Heritage & Authority:</strong> Built on a legacy of industrial service, our domain currently holds a <strong>DA of 5</strong>.</li>
-                    <li style="margin-bottom: 8px;"><strong>• Link Ecosystem:</strong> Supported by <strong>626 Inbound Links</strong>, showing long-standing web trust.</li>
-                    <li style="margin-bottom: 8px;"><strong>• Referring Network:</strong> Recognized by <strong>36 unique Linking Domains</strong> across professional sectors.</li>
+                <h3 style="color: #111827;">Technical Insights (Verified by Moz)</h3>
+                <ul class="tech-grid">
+                    <li class="tech-item"><strong>DA 5</strong><span>Domain Authority</span></li>
+                    <li class="tech-item"><strong>626+</strong><span>Inbound Links</span></li>
+                    <li class="tech-item"><strong>36</strong><span>Referring Domains</span></li>
+                    <li class="tech-item"><strong>15+ Years</strong><span>Heritage Status</span></li>
                 </ul>
             </div>
+
+            <p>The Indian digital landscape is one of the fastest-growing in the world. Having a domain that includes the country's name while maintaining a professional, short, and punchy prefix is a massive advantage for <span class="kw">Local SEO</span>. Search engines recognize the long-standing history of <strong>Adwinindia.com</strong>, giving new content a faster route to the first page. This domain bypasses the "new site" trust issues, inheriting over a decade of web presence and established link equity from professional sectors.</p>
+            
+            <p>By acquiring <strong>Adwinindia.com</strong>, you are not just purchasing a URL; you are securing a strategic gateway to India's vast commercial audience. It is a turnkey solution for brands that value <strong>Durability, Reliability, and Market Victory</strong>. Don't miss the opportunity to lead the next wave of India's digital and industrial transformation with a name that has already stood the test of time.</p>
         </div>
-    </div>
+    </section>
 </body>
 </html>
